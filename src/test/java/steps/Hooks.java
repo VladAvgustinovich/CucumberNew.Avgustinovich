@@ -34,7 +34,7 @@ public class Hooks {
     @BeforeAll(order = 1)
     public static void setUp() {
         if (driver == null) {
-            System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver");
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.get("https://qualit.applineselenoid.fvds.ru/");
