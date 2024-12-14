@@ -15,7 +15,7 @@ public class BaseTest {
     public static WebDriver driver;
 
     @BeforeAll
-    static void setup() {
+    public static void setup() {
         // Определение типа драйвера
         String driverType = System.getProperty("type.driver", "local");
         if ("remote".equalsIgnoreCase(driverType)) {
@@ -58,7 +58,7 @@ public class BaseTest {
     }
 
     @AfterAll
-    static void tearDown() {
+    public static void tearDown() {
         try {
             if (driver != null) {
                 driver.quit();
